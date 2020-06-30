@@ -1,9 +1,10 @@
 let values = [];
-
+// i and j needs to be global because we are using them in 2 different functions and they'll be out of scope otherwise
 let i = 0;
 let j = 0;
 
 function setup() {
+  // TO CHANGE THE NUMBER OF BARS TYPE HERE
   createCanvas(windowWidth, windowHeight);
   values = new Array(width);
   for (let i = 0; i < values.length; i++) {
@@ -29,6 +30,7 @@ function draw() {
   i++;
 
   for (let i = 0; i < values.length; i++) {
+    // CHANGE STROKE HERE
     stroke(255);
     line(i, height, i, height - values[i]);
   }
